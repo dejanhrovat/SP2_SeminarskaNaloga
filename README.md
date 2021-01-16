@@ -1,2 +1,2 @@
-#SP2_seminarska naloga
+# SP2_seminarska naloga
 REST API CRUD with PHP
