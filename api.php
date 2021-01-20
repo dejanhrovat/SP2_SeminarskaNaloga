@@ -5,7 +5,7 @@ class API{
         $this->database_connection();
     }
     function database_connection(){
-        $this->connect = new PDO("mysql:host=localhost;dbname=test", "root" , "");
+        $this->connect = new PDO("mysql:host=152.89.234.80;dbname=dule10_test", "dule10" , "gVd7*e^w8mj@CzMT");
     }
     function fetch_all(){
         $query = "SELECT * FROM uporabnik ORDER BY id";

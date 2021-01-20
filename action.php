@@ -7,7 +7,7 @@ if(isset($_POST["action"])){
             'last_name'=>$_POST['last_name'],
             'homeAddress'=>$_POST['homeAddress']
         );
-        $api_url = "http://localhost/SP2_naloga/test_api.php?action=insert";
+        $api_url = "http://dule.gn1.io/SP2_naloga/test_api.php?action=insert";
         $client = curl_init($api_url);
 		curl_setopt($client, CURLOPT_POST, true);
 		curl_setopt($client, CURLOPT_POSTFIELDS, $form_data);
@@ -30,7 +30,7 @@ if(isset($_POST["action"])){
 
     if($_POST["action"]=='fetch_single'){
         $id=$_POST["id"];
-        $api_url="http://localhost/SP2_naloga/test_api.php?action=fetch_single&id=".$id."";
+        $api_url="http://dule.gn1.io/SP2_naloga/test_api.php?action=fetch_single&id=".$id."";
         $client=curl_init($api_url);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
         $response=curl_exec($client);
@@ -45,7 +45,7 @@ if(isset($_POST["action"])){
             'id' => $_POST['hidden_id']
             
         );
-        $api_url="http://localhost/SP2_naloga/test_api.php?action=update";
+        $api_url="http://dule.gn1.io/SP2_naloga/test_api.php?action=update";
         $client=curl_init($api_url);
         curl_setopt($client, CURLOPT_POST, true);
         curl_setopt($client, CURLOPT_POSTFIELDS, $form_data);
@@ -64,7 +64,7 @@ if(isset($_POST["action"])){
 
     if($_POST["action"]=="delete"){
         $id=$_POST['id'];
-        $api_url="http://localhost/SP2_naloga/test_api.php?action=delete&id=".$id."";
+        $api_url="http://dule.gn1.io/SP2_naloga/test_api.php?action=delete&id=".$id."";
         $client=curl_init($api_url);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
         $response=curl_exec($client);

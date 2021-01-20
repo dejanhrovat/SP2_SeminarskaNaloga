@@ -1,5 +1,5 @@
 <?php
-    $api_url = "http://localhost/SP2_naloga/test_api.php?action=fetch_all";
+    $api_url = "http://dule.gn1.io/SP2_naloga/test_api.php?action=fetch_all";
     $client = curl_init($api_url);
     curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($client);
